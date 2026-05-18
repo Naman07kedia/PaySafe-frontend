@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PaySafe:Modular UPI Fraud </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- 🔝 NAVBAR -->
+<header class="navbar">
+    <div class="logo">
+        <img src="logo.jpeg" alt="logo">
+        <span>PaySafe</span>
+    </div>
+
+    <div class="theme-toggle" onclick="toggleTheme()">
+    <div class="toggle-track">
+        <div class="toggle-thumb">
+            <span id="themeIcon">🌙</span>
+        </div>
+    </div>
+</div>
+</header>
+
+<!-- 🚀 HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Smart UPI Fraud Protection</h1>
+        <p>
+   		 Detect fraud instantly, understand risk factors, and stay protected with AI-driven insights.
+
+        </p>
+    </div>
+
+    <img src="logo.jpeg" class="hero-img">
+</section>
+
+<!-- 📘 ABOUT -->
+<section>
+    <h2>About</h2>
+    <p>
+        PaySafe is an intelligent UPI fraud detection platform designed to enhance the security of digital transactions in real time. It leverages machine learning, anomaly detection, and explainable AI to detect suspicious behavior and protect users from financial fraud.
+    </p>
+</section>
+
+<!-- 📊 OVERVIEW -->
+<section>
+    <h2>Overview</h2>
+    <p>
+        PaySafe is a real-time fraud detection system built to secure digital payment ecosystems such as UPI. The platform integrates advanced machine learning models, rule-based risk scoring, behavioral analytics, and anomaly detection to evaluate every transaction dynamically. Each transaction is analyzed across multiple dimensions including transaction amount, user behavior patterns, device identity, and contextual signals to generate an accurate risk score. The system classifies transactions into safe, suspicious, or high-risk categories and provides clear, explainable insights into why a transaction was flagged. With a FastAPI backend and an interactive frontend dashboard, PaySafe enables instant fraud detection, continuous monitoring, and intelligent decision-making for enhanced financial security.
+    </p>
+    </p>
+</section>
+
+<!-- ⚙️ HOW IT WORKS -->
+<section>
+    <h2>How It Works</h2>
+    <p>
+        User inputs transaction data → Backend processes it → ML model predicts fraud probability → Anomaly model checks unusual behavior → Final risk score is generated → Result is displayed instantly with visual indicators.
+    </p>
+</section>
+
+<!-- 💳 TEST -->
+<section>
+    <h2>Test Transaction</h2>
+
+    <input id="frequency" type="number" placeholder="Transaction Frequency">
+	<input id="deviation" type="number" placeholder="Amount Deviation">
+	<input id="message" type="text" placeholder="Message (optional)">
+	<button type="button" onclick="checkFraud()">Check Fraud</button>
+    <h3 id="result"></h3>
+
+    <progress id="riskBar" value="0" max="1"></progress>
+    
+    <div id="fraudResult" class="result-card">
+        <h2 id="riskLabel"></h2>
+        <p>Risk Score: <span id="riskScore"></span>%</p>
+
+        <div class="why-section">
+            <h3>🔍 Why flagged?</h3>
+            <ul id="reasonsList"></ul>
+        </div>
+
+        <div class="features-section">
+            <h3>📊 Top Factors</h3>
+            <ul id="featuresList"></ul>
+        </div>
+    </div>
+</section>
+<!-- 🔗 LINKS -->
+<section>
+    <h2>Tools</h2>
+    <a href="http://127.0.0.1:8000/docs" target="_blank">API Docs</a><br>
+    <a href="http://localhost:8501" target="_blank">Dashboard</a>
+</section>
+
+
+</body>
+<script src="script.js"></script>
+</html>
